@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+    <path d="M14 4H40L50 14V60H14Z" fill="#ffffff" stroke="#222222" stroke-width="3"></path>
+
+    <path d="M40 4V14H50" fill="none" stroke="#222222" stroke-width="3"></path>
+
+    <rect x="20" y="24" width="24" height="3" fill="#222222"></rect>
+    <rect x="20" y="32" width="20" height="3" fill="#222222"></rect>
+    <rect x="20" y="40" width="24" height="3" fill="#222222"></rect>
+
+    <rect x="20" y="48" width="8" height="8" fill="#4caf50"></rect>
+</svg>

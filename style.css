@@ -1,0 +1,154 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:
+        radial-gradient(circle at top left,#3a7a3a,#151515 40%),
+        #151515;
+    font-family:"Segoe UI",sans-serif;
+    color:white;
+    padding:20px;
+}
+
+.container{
+    width:min(900px,100%);
+    background:rgba(255,255,255,.08);
+    backdrop-filter:blur(16px);
+    border:1px solid rgba(255,255,255,.1);
+    border-radius:24px;
+    padding:30px;
+    box-shadow:0 20px 60px rgba(0,0,0,.4);
+}
+
+.title{
+    text-align:center;
+    font-size:2rem;
+    margin-bottom:10px;
+}
+
+.subtitle{
+    text-align:center;
+    opacity:.7;
+    margin-bottom:30px;
+}
+
+.input-group{
+    display:flex;
+    flex-direction:column;
+    gap:12px;
+}
+
+.block-options{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:12px;
+}
+
+.block-options label{
+    display:block;
+    margin-bottom:6px;
+    opacity:.8;
+}
+
+input,
+select{
+    width:100%;
+    padding:16px;
+    border:none;
+    border-radius:14px;
+    background:#232323;
+    color:white;
+    font-size:1rem;
+}
+
+input:focus,
+select:focus{
+    outline:2px solid #4caf50;
+}
+
+button{
+    width:100%;
+    padding:16px;
+    border:none;
+    border-radius:14px;
+    font-size:1rem;
+    font-weight:bold;
+    cursor:pointer;
+    background:linear-gradient(
+        135deg,
+        #4caf50,
+        #66bb6a
+    );
+    color:white;
+    transition:.2s;
+}
+
+button:hover{
+    transform:translateY(-2px);
+}
+
+button:disabled{
+    opacity:.5;
+    cursor:not-allowed;
+}
+
+.stats{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:12px;
+    margin-top:20px;
+}
+
+.card{
+    background:#202020;
+    border-radius:14px;
+    padding:16px;
+    text-align:center;
+}
+
+.card h3{
+    opacity:.7;
+    font-size:.9rem;
+}
+
+.card p{
+    margin-top:6px;
+    font-size:1.2rem;
+    font-weight:bold;
+}
+
+.preview{
+    margin-top:25px;
+    text-align:center;
+}
+
+canvas{
+    background:white;
+    padding:20px;
+    border-radius:20px;
+    max-width:100%;
+    box-shadow:0 10px 30px rgba(0,0,0,.35);
+}
+
+#downloadBtn{
+    margin-top:20px;
+}
+
+@media(max-width:700px){
+
+    .stats{
+        grid-template-columns:1fr;
+    }
+
+    .block-options{
+        grid-template-columns:1fr;
+    }
+
+}

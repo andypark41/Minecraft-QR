@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QR → Minecraft Function Generator</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcode-generator/1.4.4/qrcode.min.js"></script>
+</head>
+<body>
+
+<div class="container">
+
+    <h1 class="title">QR → Minecraft Function</h1>
+
+    <p class="subtitle">
+        링크를 QR 코드로 변환하고 Minecraft mcfunction 파일을 생성합니다.
+    </p>
+
+    <div class="input-group">
+
+        <input
+            id="urlInput"
+            type="text"
+            placeholder="https://example.com"
+        >
+
+        <div class="block-options">
+
+            <div>
+                <label>검은색 부분 블록</label>
+
+                <select id="darkBlock">
+                    <option value="minecraft:black_concrete">Black Concrete</option>
+                    <option value="minecraft:black_wool">Black Wool</option>
+                    <option value="minecraft:coal_block">Coal Block</option>
+                    <option value="minecraft:obsidian">Obsidian</option>
+                </select>
+            </div>
+
+            <div>
+                <label>흰색 부분 블록</label>
+
+                <select id="lightBlock">
+                    <option value="minecraft:white_concrete">White Concrete</option>
+                    <option value="minecraft:white_wool">White Wool</option>
+                    <option value="minecraft:quartz_block">Quartz Block</option>
+                    <option value="minecraft:smooth_quartz">Smooth Quartz</option>
+                    <option value="minecraft:smooth_quartz">Air</option>
+                </select>
+            </div>
+
+        </div>
+
+        <button onclick="generateQR()">
+            QR 생성
+        </button>
+
+    </div>
+
+    <div class="stats">
+
+        <div class="card">
+            <h3>QR 크기</h3>
+            <p id="sizeText">-</p>
+        </div>
+
+        <div class="card">
+            <h3>검은 블록 수</h3>
+            <p id="blockText">-</p>
+        </div>
+
+        <div class="card">
+            <h3>총 픽셀 수</h3>
+            <p id="pixelText">-</p>
+        </div>
+
+    </div>
+
+    <div class="preview">
+        <canvas id="canvas"></canvas>
+    </div>
+
+    <button
+        id="downloadBtn"
+        disabled
+        onclick="downloadFunction()"
+    >
+        mcfunction 다운로드
+    </button>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
